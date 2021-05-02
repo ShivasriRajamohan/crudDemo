@@ -1,0 +1,24 @@
+<html>
+  {% extends 'crudApp/base.html' %}
+{%block content %}
+  <h1> Employee Details
+  </h1>
+  <table>
+    <thead>
+      <th> Employee ID</th>
+      <th> Employee Name</th>
+      <th>Year of experience</th>
+      <th>Employee Address</th>
+    </thead>
+    <tr>
+      {% for em in employee %}
+      <td> {{em.empno}}</td>
+      <td> {{em.empname}}</td>
+      <td> {{em.empexp}}</td>
+      <td> {{em.empaddress}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href ="/create"> <button type ="button"> Add New Student </button></a>
+  {% endblock %}
+  </html>
